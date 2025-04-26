@@ -9,4 +9,8 @@ r"""# Multiples of 3 or 5
   Therefore, the total sum would become the sum of the two above, but notice that we are double counting multiples of $3$ and $5$ (i.e., of $15$), so we need to subtract them once. Therefore, the final result is:
   $$3\left(\frac{\lfloor 999/3\rfloor (\lfloor 999/3\rfloor + 1)}{2}\right) + 5\left(\frac{\lfloor 999/5\rfloor (\lfloor 999/5\rfloor + 1)}{2}\right) - 15\left(\frac{\lfloor 999/15\rfloor (\lfloor 999/15\rfloor + 1)}{2}\right) = \boxed{233168}$$"""
 
-print(3*((999//3)*(999//3 + 1)/2) + 5*((999//5)*(999//5 + 1)/2) - 15*((999//15)*(999//15 + 1)/2)) # 233168
+def solution() -> None:
+  """Solution entry point."""
+  print(3*((999//3)*(999//3 + 1)//2) + 5*((999//5)*(999//5 + 1)//2) - 15*((999//15)*(999//15 + 1)//2)) # 233168
+
+solution()

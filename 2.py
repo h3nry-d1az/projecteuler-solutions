@@ -7,18 +7,22 @@ r"""# Even Fibonacci Numbers
 
   Notice now that $F_n$ is divisible by two every three iterations (because after two odd numbers, the next Fibonacci number will be their sum, thus even), so the problem becomes trivial and efficient with a `while` loop with a counter that starts at two and increases by three, yielding $\boxed{4613732}$ as the final result."""
 
-memo = {1: 1, 2: 2}
-def fibo(n):
-    if memo.get(n): return memo[n]
-    else:
-        memo[n] = fibo(n-1) + fibo(n-2)
-        return memo[n]
+def fibo(n: int, memo: dict) -> int:
+  """Returns the $n$th Fibonacci number."""
+  if memo.get(n): return memo[n]
+  else:
+    memo[n] = fibo(n-1, memo) + fibo(n-2, memo)
+    return memo[n]
 
-k = 2
-count = 0
-while fibo(k) <= 4_000_000:
-    if fibo(k) % 2 == 0:
-        count += fibo(k)
+def solution() -> None:
+  """Solution entry point."""
+  memo = {1: 1, 2: 2}
+  k = 2
+  count = 0
+  while fibo(k, memo) <= 4_000_000:
+    if fibo(k, memo) % 2 == 0:
+      count += fibo(k, memo)
     k += 3
+  print(count) # 4613732
 
-print(count) # 4613732
+solution()
