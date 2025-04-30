@@ -1,5 +1,6 @@
 r"""# Goldbach's Other Conjecture
-**Problem:** It was proposed by Christian Goldbach that every odd composite number can be written as the sum of a prime and twice a square.
+## Problem Statement
+It was proposed by Christian Goldbach that every odd composite number can be written as the sum of a prime and twice a square.
 \begin{align}
 9 = 7 + 2 \times 1^2\\\\
 15 = 7 + 2 \times 2^2\\\\
@@ -14,7 +15,8 @@ It turns out that the conjecture was false.
 What is the smallest odd composite that cannot be written as the sum of a prime and twice a square?
 
 
-**Solution:** The conjecture can be rewritten equivalently as "for every odd number $2n+1$, there exists a number $k$ such that $(2n+1)-2k^2$ is prime". A valid counterexample would show that, for some $2n+1$, no such $k$ exists.
+## Solution
+The conjecture can be rewritten equivalently as "for every odd number $2n+1$, there exists a number $k$ such that $(2n+1)-2k^2$ is prime". A valid counterexample would show that, for some $2n+1$, no such $k$ exists.
 
 Notice first that a simple primality checking function can be implemented by iterating the numbers from $1$ to $\lfloor\sqrt n\rfloor$ and checking whether any one of them divides $n$. Another remarkable fact to take into account is that we only need to check for the $k$s lower than or equal to $\lceil\sqrt n\rceil$, since a number above that threshold would make the subtraction less than or equal to one, and thus not prime.
 

@@ -1,9 +1,11 @@
 r"""# Multiples of 3 or 5
-**Problem:** If we list all the natural numbers below $10$ that are multiples of $3$ or $5$, we get $3, 5, 6$ and $9$. The sum of these multiples is $23$.
+## Problem Statement
+If we list all the natural numbers below $10$ that are multiples of $3$ or $5$, we get $3, 5, 6$ and $9$. The sum of these multiples is $23$.
 
   Find the sum of all the multiples of $3$ or $5$ below $1000$.
 
-**Solution:** This is primarily a math problem rather than a computer science one. Recall that all multiples of $3$ are of the form $3k$, with $k\in\mathbb{Z}$; likewise, all numbers divisible by $5$ can be expressed as $5k$.
+## Solution
+This is primarily a math problem rather than a computer science one. Recall that all multiples of $3$ are of the form $3k$, with $k\in\mathbb{Z}$; likewise, all numbers divisible by $5$ can be expressed as $5k$.
   Overall, the sum of multiples of $3$ becomes
   $$3\cdot 1 + 3\cdot 2 + \ldots + 3\cdot\left\lfloor\frac{999}{3}\right\rfloor = 3 \left(1+2+\ldots+\left\lfloor\frac{999}{3}\right\rfloor\right) = 3\left(\frac{\lfloor 999/3\rfloor (\lfloor 999/3\rfloor + 1)}{2}\right),$$
   and in an analog manner, the sum of multiples of $5$ is $$5\left(\frac{\lfloor 999/5\rfloor (\lfloor 999/5\rfloor + 1)}{2}\right).$$

@@ -1,11 +1,13 @@
 r"""# Totient Permutation
-**Problem:** Euler's totient function, $\varphi(n)$ [sometimes called the phi function], is used to determine the number of positive numbers less than or equal to $n$ which are relatively prime to $n$. For example, as $1, 2, 4, 5, 7$, and $8$, are all less than nine and relatively prime to nine, $\varphi(9)=6$.<br>The number $1$ is considered to be relatively prime to every positive number, so $\varphi(1)=1$.
+## Problem Statement
+Euler's totient function, $\varphi(n)$ [sometimes called the phi function], is used to determine the number of positive numbers less than or equal to $n$ which are relatively prime to $n$. For example, as $1, 2, 4, 5, 7$, and $8$, are all less than nine and relatively prime to nine, $\varphi(9)=6$.<br>The number $1$ is considered to be relatively prime to every positive number, so $\varphi(1)=1$.
 
 Interestingly, $\varphi(87109)=79180$, and it can be seen that $87109$ is a permutation of $79180$.
 
 Find the value of $n$, $1 \lt n \lt 10^7$, for which $\varphi(n)$ is a permutation of $n$ and the ratio $n/\varphi(n)$ produces a minimum.
 
-**Solution (very slow*):** The idea behind the solution is analogue to that of problem 69. That being said, the only different aspect is to check whether $\varphi(n) \in \mathtt{P}(n)$, where $\mathtt{P}(n)$ denotes the digit permutations of $n$. Notice, though, that $\varphi(n) \leq n$, so we only need to consider the permutations smaller than $n$ itself -- which serves as slight optimization --, hence the function `smaller_permutations`. Finally, this script employs multithreading and should be preferably run in a Python binary with GIL disabled. After a considerably long execution time, this program yields $\boxed{8319823}$ as the final result.
+## Solution (very slow*)
+The idea behind the solution is analogue to that of problem 69. That being said, the only different aspect is to check whether $\varphi(n) \in \mathtt{P}(n)$, where $\mathtt{P}(n)$ denotes the digit permutations of $n$. Notice, though, that $\varphi(n) \leq n$, so we only need to consider the permutations smaller than $n$ itself -- which serves as slight optimization --, hence the function `smaller_permutations`. Finally, this script employs multithreading and should be preferably run in a Python binary with GIL disabled. After a considerably long execution time, this program yields $\boxed{8319823}$ as the final result.
 
 *Execution took a total of $25\\!\\!:\\!\\!45.21$ (min:sec.ms) in an AMD Ryzen 5 5600X 6-Core processor, running no-GIL Python 3.13."""
 

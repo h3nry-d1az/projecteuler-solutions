@@ -1,5 +1,6 @@
 r"""# Totient Maximum
-**Problem:** Euler's totient function, $\varphi(n)$ [sometimes called the phi function], is defined as the number of positive integers not exceeding $n$ which are relatively prime to $n$. For example, as $1$, $2$, $4$, $5$, $7$, and $8$, are all less than or equal to nine and relatively prime to nine, $\varphi(9)=6$.
+## Problem Statement
+Euler's totient function, $\varphi(n)$ [sometimes called the phi function], is defined as the number of positive integers not exceeding $n$ which are relatively prime to $n$. For example, as $1$, $2$, $4$, $5$, $7$, and $8$, are all less than or equal to nine and relatively prime to nine, $\varphi(9)=6$.
 
 <div style="text-align: center;">
 <table style="margin-left: auto; margin-right: auto;"><tr><td><b>$n$</b></td>
@@ -48,7 +49,8 @@ It can be seen that $n = 6$ produces a maximum $n/\varphi(n)$ for $n\leq 10$.
 
 Find the value of $n\leq 1\,000\,000$ for which $n/\varphi(n)$ is a maximum.
 
-**Solution:** Recall two fundamental properties of Euler's totient function: that $\varphi(mn)=\varphi(m)\varphi(n)$ whenever $m$ and $n$ are coprime, and that $\varphi(p^\alpha) = p^\alpha - p^{\alpha - 1}$ for a prime $p$ and an integer $\alpha$. Notice also that, by the fundamental theorem of arithmetic, we can express any given integer $n$ as a product of exponentiated primes ($n={p_1}^{\alpha_1}{p_2}^{\alpha_2}\cdots {p_n}^{\alpha_n}$). Applying the previous two lemmas to the expression above we reach a simplified, closed expression for $\varphi(n)$:
+## Solution
+Recall two fundamental properties of Euler's totient function: that $\varphi(mn)=\varphi(m)\varphi(n)$ whenever $m$ and $n$ are coprime, and that $\varphi(p^\alpha) = p^\alpha - p^{\alpha - 1}$ for a prime $p$ and an integer $\alpha$. Notice also that, by the fundamental theorem of arithmetic, we can express any given integer $n$ as a product of exponentiated primes ($n={p_1}^{\alpha_1}{p_2}^{\alpha_2}\cdots {p_n}^{\alpha_n}$). Applying the previous two lemmas to the expression above we reach a simplified, closed expression for $\varphi(n)$:
 $$\varphi(n) = \varphi\left(\prod_{i=1}^k {p_i}^{\alpha_i}\right) = \prod_{i=1}^k \varphi({p_i}^{\alpha_i}) = \prod_{i=1}^k {p_i}^{\alpha_i} - {p_i}^{\alpha_i - 1}\prod_{i=1}^k {p_i}^{\alpha_i}\left(1-\frac{1}{p_i}\right) = n\prod_{i=1}^k \left(1-\frac{1}{p_i}\right).$$
 
 Furthermore, for $n/\varphi(n)$, it follows that $$\frac{n}{\varphi(n)} = \frac{n}{n\prod_{i=1}^k \left(1-\frac{1}{p_i}\right)} = \frac{1}{\prod_{i=1}^k \frac{p_i - 1}{p_i}} = \prod_{i=1}^k \frac{p_i}{p_i-1}.$$

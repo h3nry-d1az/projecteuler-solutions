@@ -1,11 +1,13 @@
 r"""# Digit Factorials
-**Problem:** $145$ is a curious number, as $1! + 4! + 5! = 1 + 24 + 120 = 145$.
+## Problem Statement
+$145$ is a curious number, as $1! + 4! + 5! = 1 + 24 + 120 = 145$.
 
 Find the sum of all numbers which are equal to the sum of the factorial of their digits.
 
 Note: As $1! = 1$ and $2! = 2$ are not sums they are not included.
 
-**Solution:** Notice first that the maximum sum of digit factorials that can be obtained with $n$ digits is trivially $9!n = 362880n$, that is, it exhibits a linear growth with respect to $n$. On the other hand, the number itself increases by $\mathscr{O}(10^{n-1})$, i.e., exponentially. We can conclude from this fact that, after a certain threshold, the equality will not hold anymore.
+## Solution
+Notice first that the maximum sum of digit factorials that can be obtained with $n$ digits is trivially $9!n = 362880n$, that is, it exhibits a linear growth with respect to $n$. On the other hand, the number itself increases by $\mathscr{O}(10^{n-1})$, i.e., exponentially. We can conclude from this fact that, after a certain threshold, the equality will not hold anymore.
 
 In order to calculate this limit value, consider a number $\underbrace{100\ldots0}_{n\text{ digits}} = 10^{n-1} > 9!n$, which, after simple computations, yields $n=8$ as the smallest possible value. Ultimately, it is only needed to iterate up to that number and add the values that meet the criteria -- process slightly optimized by precalculating the factorials from $0$ to $9$ (see `factorial09`) --, yielding $\boxed{40730}$ as the result of the problem."""
 

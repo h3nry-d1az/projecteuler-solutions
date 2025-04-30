@@ -1,5 +1,6 @@
 r"""# Longest Collatz Sequence
-**Problem:** The following iterative sequence is defined for the set of positive integers:
+## Problem Statement
+The following iterative sequence is defined for the set of positive integers:
 * $n \to n/2$ ($n$ is even)
 * $n \to 3n + 1$ ($n$ is odd)
 
@@ -11,7 +12,8 @@ r"""# Longest Collatz Sequence
   
   **NOTE:** Once the chain starts the terms are allowed to go above one million.
 
-**Solution:** Its feasible to simply brute-force the problem. Here, I just define a `collatz` function which outputs the length of the chain produced by $n$, and compute the argument of the maximum for `collatz(n)` where $n$ ranges between $13$ (which is already known), and $999999$. This yields $\boxed{837799}$ as the final solution."""
+## Solution
+Its feasible to simply brute-force the problem. Here, I just define a `collatz` function which outputs the length of the chain produced by $n$, and compute the argument of the maximum for `collatz(n)` where $n$ ranges between $13$ (which is already known), and $999999$. This yields $\boxed{837799}$ as the final solution."""
 
 def collatz(n):
   """Compute the length of the chain produced by applying the Collatz sequence rules to the input $n$."""

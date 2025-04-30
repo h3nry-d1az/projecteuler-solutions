@@ -1,5 +1,6 @@
 r"""# Largest Product in a Series
-**Problem:** The four adjacent digits in the $1000$-digit number that have the greatest product are $9 \times 9 \times 8 \times 9 = 5832$.
+## Problem Statement
+The four adjacent digits in the $1000$-digit number that have the greatest product are $9 \times 9 \times 8 \times 9 = 5832$.
 <div align="center">
 73167176531330624919225119674426574742355349194934<br>
 96983520312774506326239578318016984801869478851843<br>
@@ -24,7 +25,8 @@ r"""# Largest Product in a Series
 
 Find the thirteen adjacent digits in the $1000$-digit number that have the greatest product. What is the value of this product?
 
-**Solution:** We can simply iterate from $0$ to the length of the sequence minus $13$, and take the substring starting at $i$ and ending at $i+13$. We'll then convert it to a list of characters, which we'll map to integers and finally compute their product and store it in a list named `products`. Finally, the program will output the maximum of that list, i.e., $\boxed{23514624000}$."""
+## Solution
+We can simply iterate from $0$ to the length of the sequence minus $13$, and take the substring starting at $i$ and ending at $i+13$. We'll then convert it to a list of characters, which we'll map to integers and finally compute their product and store it in a list named `products`. Finally, the program will output the maximum of that list, i.e., $\boxed{23514624000}$."""
 
 from math import prod
 
