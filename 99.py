@@ -19,4 +19,4 @@ def solution() -> None:
     print(powers[0], )
     print(max(powers, key=lambda t: t[2]*log(t[1]))[0]+1) # 
 
-solution()
+if __name__ == '__main__': solution()

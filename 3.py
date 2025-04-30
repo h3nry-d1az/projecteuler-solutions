@@ -23,4 +23,4 @@ def solution() -> None:
   """Solution entry point."""
   print(max(prime_factors(600851475143))) # 6857
 
-solution()
+if __name__ == '__main__': solution()

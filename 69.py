@@ -79,4 +79,4 @@ def solution() -> None:
     candidates.add((n, prod(map(lambda p: p/(p-1), prime_factors(n)))))
   print(max(candidates, key=lambda t: t[1])[0]) # 510510
 
-solution()
+if __name__ == '__main__': solution()

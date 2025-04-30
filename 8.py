@@ -55,4 +55,4 @@ def solution() -> None:
     products.append(prod(map(int, list(sequence[i:i+13]))))
   print(max(products)) # 23514624000
 
-solution()
+if __name__ == '__main__': solution()

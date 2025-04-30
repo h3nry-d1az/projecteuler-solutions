@@ -48,4 +48,4 @@ def solution() -> None:
     k += 1
   print(k) # 4782
 
-solution()
+if __name__ == '__main__': solution()

@@ -17,4 +17,4 @@ def solution() -> None:
   """Solution entry point."""
   print(abs(100*101*201//6 - 100**2 * 101**2//4)) # 25164150
 
-solution()
+if __name__ == '__main__': solution()

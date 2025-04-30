@@ -16,4 +16,4 @@ def solution() -> None:
         print(a*b*c) # 31875000
         return
 
-solution()
+if __name__ == '__main__': solution()

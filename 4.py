@@ -18,4 +18,4 @@ def solution() -> None:
         palindromes.append(n*m)
   print(max(palindromes))
 
-solution()
+if __name__ == '__main__': solution()

@@ -22,4 +22,4 @@ def solution() -> None:
   """Solution entry point."""
   print(sum(digits(factorial(100)))) # 648
 
-solution()
+if __name__ == '__main__': solution()

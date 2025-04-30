@@ -19,4 +19,4 @@ def solution() -> None:
   """Solution entry point."""
   print(sum(filter(isprime, range(2,2_000_000)))) # 142913828922
 
-solution()
+if __name__ == '__main__': solution()

@@ -25,4 +25,4 @@ def solution() -> None:
     if isprime(n): counter += 1
   print(n) # 104743
 
-solution()
+if __name__ == '__main__': solution()

@@ -26,4 +26,4 @@ def solution() -> None:
     k += 3
   print(count) # 4613732
 
-solution()
+if __name__ == '__main__': solution()

@@ -14,4 +14,4 @@ def solution() -> None:
   """Solution entry point."""
   print(3*((999//3)*(999//3 + 1)//2) + 5*((999//5)*(999//5 + 1)//2) - 15*((999//15)*(999//15 + 1)//2)) # 233168
 
-solution()
+if __name__ == '__main__': solution()

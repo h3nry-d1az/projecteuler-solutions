@@ -11,4 +11,4 @@ def solution() -> None:
   """Solution entry point."""
   print(lcm(*range(1, 21))) # 232792560
 
-solution()
+if __name__ == '__main__': solution()

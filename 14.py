@@ -32,4 +32,4 @@ def solution() -> None:
       maximum = n,c
   print(maximum[0]) # 837799
 
-solution()
+if __name__ == '__main__': solution()

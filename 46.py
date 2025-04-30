@@ -43,4 +43,4 @@ def solution() -> None:
     n += 1
   print(2*n+1) # 5777
 
-solution()
+if __name__ == '__main__': solution()
