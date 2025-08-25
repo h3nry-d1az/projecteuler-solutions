@@ -178,3 +178,6 @@ bin/
 
 # Input data files
 *.txt
+
+# VS Code garbage
+.vscode/
