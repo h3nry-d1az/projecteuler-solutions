@@ -4,8 +4,6 @@
 #include <cstdint>
 using namespace std;
 
-#include <set>
-
 #define ll long long
 
 vector<int> __memo_sigma(INT16_MAX);
@@ -25,10 +23,10 @@ int main()
     // ios::sync_with_stdio(false);
     // cin.tie(nullptr);
 
-    set<int> abundant;
+    unordered_set<int> abundant;
     for (int n = 2; n <= 28123; n++) if (sigma(n) > n) abundant.insert(n);
 
-    set<int> valid;
+    unordered_set<int> valid;
     ll sum = 0;
     for (int n = 1; n <= 28123; n++)
     {
@@ -43,10 +41,6 @@ int main()
         }
         if (!invalid) {sum += n; valid.insert(n);}
     }
-
-    // for (auto e = abundant.begin(); e != abundant.end(); e++) cout << *e << " ";
-    // cout << endl;
-    // for (auto e = valid.begin(); e != valid.end(); e++) cout << *e << " ";
 
     cout << sum << endl;
 
